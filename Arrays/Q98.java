@@ -17,5 +17,6 @@ public class Q98 {
         System.out.println("Enter the value: ");
         int val = sc.nextInt();
         System.out.println(val+" is at index: "+linearSearch(nums, val));
+        sc.close();
     }
 }

@@ -19,7 +19,7 @@ public class Q99 {
     }
     public static void main(String[] args) {
          Scanner sc = new Scanner(System.in);
-        int[] nums = { 25, 34, 12, 45, 23, 28 };
+        int[] nums = { 12, 23, 25, 28, 34, 45 };
         System.out.println("Enter the value: ");
         int val = sc.nextInt();
         System.out.println(val+" is at index: "+binarySearch(nums, val));

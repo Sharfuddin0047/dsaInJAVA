@@ -9,17 +9,20 @@ import java.util.Scanner;
 
 public class Q104 {
     public static int singleNonDuplicate(int[] nums) {
-        HashMap<Integer, Integer> h1 = new HashMap<>();
-        for(int x: nums) {
-            h1.put(x,h1.getOrDefault(x,0)+1);
-        }  
-        
-        for(Integer x: h1.keySet()) {
-            if(h1.get(x) == 1) {
-                return x;
+        int start=0; int end = nums.length-1;
+        while(start<end) {
+            int mid = start+(end-start)/2;
+
+            if(mid%2==1){
+                mid--;
+            } 
+            if(nums[mid] == nums[mid+1]) {
+                start = mid+2;
+            } else {
+                end=mid;
             }
         }
-        return -1; 
+        return nums[start];
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

@@ -6,15 +6,12 @@ String without using length() method in at least
 four different ways. */
 public class Q1 {
     public static void getLength(String str) {
-        int i=0;
-        try {
-            while(true) {
-                str.charAt(i);
-                i++;
-            }
-        } catch (Exception e) {
-            System.out.println("length: " + i);
+        char[] s=str.toCharArray();
+        int count=0;
+        for(char x:s) {
+            count++;
         }
+        System.out.println("length: "+count);
     }
     public static void main(String[] args) {
         getLength("null");

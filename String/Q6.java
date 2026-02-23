@@ -20,5 +20,6 @@ public class Q6 {
         System.out.println("Enter the string: ");
         String str=sc.nextLine();
         System.out.println("Vowel count: "+vowelCount(str));
+        sc.close();
     }
 }

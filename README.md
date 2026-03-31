@@ -30,13 +30,7 @@ Whether you are a **student**, **job seeker**, or **DSA enthusiast**, this repos
 * Arrays
 * Strings
 * Linked List (Singly, Doubly)
-* Stack
-* Queue
 * HashMap & HashSet
-* Trees
-* Binary Search Tree (BST)
-* Heaps
-* Graphs
 
 ### 🔹 Algorithms
 
@@ -51,12 +45,6 @@ Whether you are a **student**, **job seeker**, or **DSA enthusiast**, this repos
   * Insertion Sort
   * Merge Sort
   * Quick Sort
-* Graph Algorithms
-
-  * BFS
-  * DFS
-* Dynamic Programming
-* Greedy Algorithms
 
 ---
 
@@ -71,12 +59,8 @@ DSA-in-Java/
 ├── Stack/
 ├── Queue/
 ├── Hashing/
-├── Trees/
-├── Graphs/
 ├── Sorting/
-├── Searching/
 ├── Recursion/
-├── DynamicProgramming/
 └── README.md
 ```
 

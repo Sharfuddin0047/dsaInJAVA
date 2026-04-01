@@ -21,8 +21,8 @@ public class Q48 {
         return sb.toString();
     }
     public static void main(String[] args) {
-        System.out.println(obj.backspaceCompare("ab#c", "ad#c")); 
-        System.out.println(obj.backspaceCompare("ab##", "c#d#")); 
-        System.out.println(obj.backspaceCompare("a#c", "b")); 
+        System.out.println(backspaceCompare("ab#c", "ad#c")); 
+        System.out.println(backspaceCompare("ab##", "c#d#")); 
+        System.out.println(backspaceCompare("a#c", "b")); 
     }
 }

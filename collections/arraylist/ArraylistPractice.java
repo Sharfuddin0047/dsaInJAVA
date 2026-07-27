@@ -26,5 +26,22 @@ public class ArraylistPractice {
         //Contains Element O(n)
         System.out.println(list.contains(10));
         System.out.println(list.contains(11));
+
+        //size 
+        System.out.println(list.size());
+
+        // print the arraylist using loop
+        for(int i=0; i<list.size(); i++) {
+            System.out.print(list.get((i))+" ");
+        }
+        System.out.println();
+
+        //print in reverse
+        for(int i=list.size()-1; i>=0; i--) {
+            System.out.print(list.get((i))+" ");
+        }
+        System.out.println();
+
+        
     }
 }

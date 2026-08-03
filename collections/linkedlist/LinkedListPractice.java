@@ -13,29 +13,28 @@ public class LinkedListPractice {
     public static Node head;
     public static Node tail;
 
-    //  Add First in linkedlist
+    // Add First in linkedlist
     public void addFirst(int data) {
-        //step 1 = create new node
+        // step 1 = create new node
         Node newNode = new Node(data);
 
-        if(head == null) {
+        if (head == null) {
             head = tail = newNode;
             return;
         }
 
-        //step2 - newNode next = head
-        newNode.next = head; //link
+        // step2 - newNode next = head
+        newNode.next = head; // link
 
-        //step3 - head = newNode
+        // step3 - head = newNode
         head = newNode;
-    } 
-
+    }
 
     // Add Last in linkedlist
     public void addLast(int data) {
         Node newNode = new Node(data);
 
-        if(head == null) {
+        if (head == null) {
             head = tail = newNode;
             return;
         }
@@ -44,27 +43,48 @@ public class LinkedListPractice {
         tail = newNode;
     }
 
-
     // print the linkedlist
-    public void printLinkedList(Node head) { //O(n)
+    public void printLinkedList(Node head) { // O(n)
         Node temp = head;
 
-        while(temp != null) {
-            System.out.print(temp.data+" -> ");
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
         System.out.println("null");
     }
+
+    // Add in the middle
+    public void add(int idx, int data) {
+        if(idx == 0) {
+            addFirst(data);
+            return;
+        }
+
+        Node newNode = new Node(data);
+        Node temp = head;
+        int i=0;
+
+        while(i<idx-1) {
+            temp= temp.next;
+            i++;
+        }
+        newNode.next = temp.next;
+        temp.next=newNode;
+    }
+
     public static void main(String[] args) {
         LinkedListPractice ll = new LinkedListPractice();
 
         ll.printLinkedList(head);
         ll.addFirst(1);
-        ll.addFirst(2); 
+        ll.addFirst(2);
 
         ll.printLinkedList(head);
         ll.addLast(3);
         ll.addLast(4);
+
+        ll.add(2, 9);
 
         ll.printLinkedList(head);
 

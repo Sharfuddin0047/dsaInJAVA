@@ -77,6 +77,24 @@ public class LinkedListPractice {
         temp.next=newNode;
     }
 
+    // Remove First in linkedlist
+    public int removeFirst() {
+
+        if(size == 0) {
+            System.out.println("LL is Empty");
+            return Integer.MIN_VALUE;
+        } else if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size--;
+            return val;
+        }
+        int val = head.data;
+        head= head.next;
+        size--;
+        return val;
+    }
+
     public static void main(String[] args) {
         LinkedListPractice ll = new LinkedListPractice();
 
@@ -93,5 +111,7 @@ public class LinkedListPractice {
         ll.printLinkedList(head);
         System.out.println(ll.size);
 
+        ll.removeFirst();
+        System.out.println(ll.printLinkedList(head));
     }
 }

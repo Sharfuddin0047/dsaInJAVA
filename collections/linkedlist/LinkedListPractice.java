@@ -12,11 +12,13 @@ class Node {
 public class LinkedListPractice {
     public static Node head;
     public static Node tail;
+    public static int size;
 
     // Add First in linkedlist
     public void addFirst(int data) {
         // step 1 = create new node
         Node newNode = new Node(data);
+        size++;
 
         if (head == null) {
             head = tail = newNode;
@@ -33,6 +35,7 @@ public class LinkedListPractice {
     // Add Last in linkedlist
     public void addLast(int data) {
         Node newNode = new Node(data);
+        size++;
 
         if (head == null) {
             head = tail = newNode;
@@ -62,6 +65,7 @@ public class LinkedListPractice {
         }
 
         Node newNode = new Node(data);
+        size++;
         Node temp = head;
         int i=0;
 
@@ -87,6 +91,7 @@ public class LinkedListPractice {
         ll.add(2, 9);
 
         ll.printLinkedList(head);
+        System.out.println(ll.size);
 
     }
 }

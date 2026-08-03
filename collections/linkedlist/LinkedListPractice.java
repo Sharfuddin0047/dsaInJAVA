@@ -43,14 +43,30 @@ public class LinkedListPractice {
         tail.next = newNode;
         tail = newNode;
     }
+
+
+    // print the linkedlist
+    public void printLinkedList(Node head) { //O(n)
+        Node temp = head;
+
+        while(temp != null) {
+            System.out.print(temp.data+" -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
     public static void main(String[] args) {
         LinkedListPractice ll = new LinkedListPractice();
 
+        ll.printLinkedList(head);
         ll.addFirst(1);
         ll.addFirst(2); 
 
+        ll.printLinkedList(head);
         ll.addLast(3);
         ll.addLast(4);
+
+        ll.printLinkedList(head);
 
     }
 }
